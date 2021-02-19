@@ -1,3 +1,30 @@
 body {
-  font-style: sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(138, 216, 138);
+  padding: 30px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.quiz-container {
+  height: 200px;
+  background-color: rgb(209, 145, 209);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.quiz-button {
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: turquoise;
 }
