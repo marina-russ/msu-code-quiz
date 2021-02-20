@@ -40,7 +40,28 @@ let questions = [
     choice4: "answer 44444",
 
     answer: 1
+  },
+  {
+    question: "question string dddddddd",
+
+    choice1: "answer 11111",
+    choice2: "answer 22222",
+    choice3: "answer 33333",
+    choice4: "answer 44444",
+
+    answer: 1
+  },
+  {
+    question: "question string eeeeeee",
+
+    choice1: "answer 11111",
+    choice2: "answer 22222",
+    choice3: "answer 33333",
+    choice4: "answer 44444",
+
+    answer: 1
   }
+
 ]
 
 // arrow function: function name = (parameters) => return
@@ -62,11 +83,13 @@ incrementScore = num => {
 
 getNewQuestion = () => {
 
-  // if (availableQuestions.length === 0) {
-  //   // if (availableQuestions.length === 0 || timer = 0) {} 
-  //   // TODO: add end game screen
-  //   return window.location.assign("/end.html");
-  // }
+  if (availableQuestions.length === 0) {
+    //if (availableQuestions.length === 0 || timer = 0) {} 
+    // save score to local storage
+    localStorage.setItem("mostRecentScore", score);
+    // move to winner.html page
+    return window.location.assign("winner.html");
+  }
 
   // update HUD question counter each round
   questionCounter++;
@@ -117,6 +140,5 @@ choices.forEach(choice => {
 
   });
 });
-
 
 startGame();
