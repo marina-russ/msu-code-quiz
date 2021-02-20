@@ -1,30 +1,68 @@
+:root {
+  background-color: rgb(193, 196, 193);
+  font-size: 16px;
+}
+
+/* ====MAIN STYLES==== */
+/***********************/
 body {
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   text-align: center;
+  box-sizing: border-box;
   margin: 0;
 }
 
 nav {
   background-color: rgb(138, 216, 138);
-  padding: 30px;
+  padding: 30px 0;
   width: 100%;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 3rem;
 }
 
-.quiz-container {
-  height: 200px;
-  background-color: rgb(209, 145, 209);
-  padding: 20px;
-  margin-bottom: 20px;
+/* ====HUD==== */
+/***************/
+#hud {
+  display: flex;
+  justify-content: space-between;
 }
 
-.quiz-button {
-  font-size: 18px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: turquoise;
+.hud-label,
+.hud-item,
+.hud-main-text {
+  text-align: center;
+}
+
+/* ====QUIZ==== */
+/****************/
+.answer-container {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 5px;
+  border: 1px solid navy;
+}
+
+.choice-option {
+  padding: 1.3rem;
+  background-color: rgb(27, 122, 180);
+  color: #fff;
+  margin: 0;
+}
+
+.choice-text {
+  width: 100%;
+  padding: 1.3rem;
+  margin: 0;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+.correct {
+  background-color: green;
 }
