@@ -7,6 +7,7 @@ const startButton = document.getElementById('start-btn');
 
 const answerPoints = 10;
 const maxTestQuestions = 5;
+let score = 0;
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -66,13 +67,13 @@ let questions = [
 
 ];
 
-const startingMinutes = 1;
-let time = (startingMinutes * 30) - 1; //to start at 2:59 instead of 3:00, due to unknown time delay bug
+const startingMinutes = 3;
+let time = (startingMinutes * 60 - 1); //to start at 2:59 instead of 3:00, due to unknown time delay bug
 const countdownEl = document.getElementById('countdown');
 let timerInterval;
 
 // * START GAME, START TIMER, SHOW QUESTIONS
-startButton.addEventListener('click', function(){
+startButton.addEventListener('click', function() {
   // ? COUNTDOWN TIMER
   // NOTE: there is a delay on timer start
   // clears interval ID if it is already set
@@ -87,7 +88,7 @@ startButton.addEventListener('click', function(){
   // timer math
   function updateCountdown() {
     const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
+    let seconds = (time % 60);
     // conditional statement to prevent timer from starting at 3:0 instead of 3:00, 
     seconds = seconds < 10 ? ('0' + seconds) : seconds;
     // display countdown as text on page
@@ -95,37 +96,32 @@ startButton.addEventListener('click', function(){
     time--;
 
     // ? END QUIZ IF TIMER RUNS OUT
-    // time == -1 because when we let (time = startingMinutes) near line 70 we subtracted 1 
-    if (time == -1) {
-      alert("time is up!");
+    if (time < 0) {
+      clearInterval(timerInterval);
+      //console.log("here is an expression");
+      alert("Sorry, time is up!");
       return window.location.assign("index.html");
     }
   }
 
   // ? REVEAL QUESTION/ANSWER SECTION ON QUIZ START
   let qaContainer = document.getElementById("qa-container");
-    console.log(qaContainer);
-    console.log(qaContainer.style.display);
+    //console.log(qaContainer.style.display);
 
     if (qaContainer.style.display == "none") {
       qaContainer.style.display = "block";
-      console.log("show this");
     } else if (qaContainer.style.display == "") {
       qaContainer.style.display = "block";
-      console.log("secret secret");
     } else {
       qaContainer.style.display = "none";
-      console.log("hide this");
     }
-  console.log(qaContainer.style.display);
 
-  // ? QUIZ GAME MECHANICS
-  questionCounter = 0;
-  score = 0;
+
   // '...' (spread) syntax 'clones' the QUESTIONS array into this array, so any changes made here don't also change that array
   availableQuestions = [...questions];
 
   getNewQuestion();
+
 });
 
 // * UPDATING SCORE
@@ -188,8 +184,9 @@ choices.forEach(choice => {
       incrementScore(answerPoints);
     }
 
+    // reduces time by 10 seconds on incorrect answers
     if (classToApply === 'incorrect') {
-      decreaseTime(answerPoints);
+      decreaseTime();
     }
 
     // add appropriate class styling
