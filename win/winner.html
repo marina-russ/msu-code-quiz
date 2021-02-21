@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Scores</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <h1>Code Quiz Challenge</h1>
+  </nav>
+
+  <main id="winner-page">
+    <div class="container">
+      <div id="winner">
+        <p>Your Score:</p>
+        <h2 id="final-score"></h2>
+        <form>
+          <label for="initials">Congrats!<br>Enter Your Initials:</label>
+          <input 
+            type="text" 
+            name="initials" 
+            id="initials" 
+            placeholder="ABC"
+          />
+          <button 
+            type="submit" 
+            class="button" 
+            id="save-score-btn"
+          >
+            Save
+          </button>
+        </form>
+        <a class="button go-home" href="index.html">Go Home</a>
+      </div>
+
+      <div class="previous-score-wrapper">
+        <h2 id="phs-h2">Previous High Scores:</h2>
+        <div class="previous-high-scores">
+
+          <div id="initials-column">
+            <h3>Initials:</h3>
+            <ul id="list-name">
+              <li>MCR</li>
+            </ul>
+          </div>
+          <div id="score-column">
+            <h3>Score:</h3>
+            <ul id="list-score">
+              <li>
+                50
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/winner.js"></script>
+</body>
+
+</html>
