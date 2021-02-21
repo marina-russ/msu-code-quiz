@@ -14,15 +14,16 @@ const saveButton = document.getElementById('save-score-btn');
 let nameStored = JSON.parse(localStorage.getItem("initials"));
 
 saveButton.addEventListener('click', function() {
-
+  // ! can't get input data to save to local storage... preventDefault() doesn't seem to do anything...
+  saveButton.preventDefault();
   // object for JSON to store individual score/initial pairings
   let highScore = {
     name: nameStored,
     yourScore: mostRecentScore
-  }
+  };
 
   // update nameStored with input from webpage
-  if (nameStored == null) {
+  if (nameStored === null) {
     nameStored = [nameStored.value];
   } else {
     // if same player is entering name, just add it again
@@ -50,17 +51,10 @@ saveButton.addEventListener('click', function() {
 
     // add SCORE to the <ul id="list-score">
     let ulScoreList = document.getElementById("list-score");
-    liItem.innerHTML(highScore.name);
+    liItem.innerHTML(highScore.yourScore);
     ulScoreItem.appendChild(liItem);
-  }
+  };
 
-  liItem.forEach()
+  liItem.forEach();
   addNewLi();
-
 });
-
-// TODO: timer button event listener
-timeButton.addEventListener('click')
-
-const startButton = document.getElementById('start-btn')
-const timeButton = document.getElementById('timer-btn')
