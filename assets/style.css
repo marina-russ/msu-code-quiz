@@ -70,11 +70,11 @@ a {
   padding: 50px;
   margin: 0 auto;
   background-image: url('its-dangerous-to-go-alone.jpg');
-  background-size: stretch;
+  background-size: cover;
 }
 
 #dangerous-alone {
-  background-color: #000;
+  background-color: rgb(3, 3, 3);
   color: #fff;
 
 }
@@ -239,7 +239,7 @@ form {
 
 #initials {
   width: 94px;
-  padding: 5px 0 5px p5px;
+  padding: 5px 0 5px 5px;
   margin: 10px 0;
 }
 
