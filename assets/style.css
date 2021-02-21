@@ -50,8 +50,9 @@ a {
 /* ====QUIZ==== */
 /****************/
 
-.qa-container {
+#qa-container {
   padding: 0 100px;
+  display: none;
 }
 
 .answer-container {
