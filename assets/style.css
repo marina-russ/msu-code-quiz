@@ -3,7 +3,6 @@
   --pale-bkgd-color: #c4a469;
   --neutral-bkgd-color: #7a7864;
   --zelda-red: #f53224;
-  --zelda-ii-blue: #2864d8;
   --zelda-link-past-blue: #7f90d8;
   --zelda-green: rgb(115, 252, 88);
 }
@@ -193,12 +192,55 @@ h3#countdown {
 /* ====WINNER==== */
 /******************/
 
+#winner-page {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#winner p,
+#winner h1,
+#winner label {
+  margin-bottom: 20px;
+}
+
+#winner label {
+  line-height: 2rem;
+}
+
+#final-score {
+  padding: 10px;
+  background-color: var(--zelda-green);
+  color: #000;
+}
+
+#final-score:hover {
+  color: #fff;
+  background-color: green;
+}
+
+#winner input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#winner input:focus {
+  color: green;
+}
+
 form {
-  /*width: 100%*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*TODO: Make input width match button width*/
+}
+
+#initials {
+  width: 94px;
+  padding: 5px 0 5px p5px;
+  margin: 10px 0;
 }
 
 .previous-high-scores {
@@ -207,4 +249,47 @@ form {
 
 #winner a {
   display: block;
+  margin: 0 auto;
+}
+
+#winner .button  {
+  width: 100px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+#winner .button:hover {
+  color: green;
+}
+
+#list-name,
+#list-score {
+  list-style: none;
+  text-align: left;
+}
+
+#list-name li,
+#list-score li {
+  padding: 3px;
+  margin: 3px;
+}
+
+.previous-score-wrapper {
+  background-color: var(--pale-bkgd-color)
+}
+
+.previous-high-scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#phs-h2 {
+border-bottom: 5px solid var(--neutral-bkgd-color)
+}
+
+#initials-column,
+#score-column {
+  padding: 0 10px;
+  margin: 0 20px;
 }
