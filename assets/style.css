@@ -23,6 +23,16 @@ h1 {
   font-size: 3rem;
 }
 
+button {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+}
+
 /* ====HUD==== */
 /***************/
 #hud {
@@ -82,6 +92,10 @@ form {
   flex-direction: column;
   align-items: center;
   /*TODO: Make input width match button width*/
+}
+
+.previous-high-scores {
+  display: flex;
 }
 
 #winner a {

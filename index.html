@@ -11,15 +11,15 @@
 </head>
 <body>
   <nav>
-      <h1>Code Quiz Challenge</h1>
+    <h1>Code Quiz Challenge</h1>
   </nav>
 
   <main>
     <h2>Welcome to the quiz!</h2>
     <p>Quiz instructions go here.</p>
 
-    <button id="quiz-button">Start Quiz!</button>
-    <button id="highscore-button">View High Score!</button>
+    <button id="start-btn">Start Quiz!</button>
+    <a href="winner.html" class="button highscore-button">View High Score!</a>
 
     <div class="hud-container">
       <div id="game" class="justify-center flex-column">
@@ -32,6 +32,16 @@
             </p>
             <h2 class="hud-main-text" id="question-counter">
               1/3
+            </h2>
+          </div>
+
+          <!--TIMER-->
+          <div class="hud-item timer-div">
+            <p class="hud-label">
+              Timer:
+            </p>
+            <h2 class="hud-main-text" id="timer-counter">
+              00:00
             </h2>
           </div>
 

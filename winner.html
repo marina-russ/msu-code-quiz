@@ -20,6 +20,7 @@
     <div id="winner" class="flex-center flex-column">
       <h1 id="final-score"></h1>
       <form>
+        <label for="intials">Enter Initials:</label>
         <input 
           type="text" 
           name="initials" 
@@ -30,17 +31,31 @@
           type="submit" 
           class="btn" 
           id="save-score-btn"
-          onclick="saveHighScore(event)"
+          <!--onclick="saveHighScore(event)"-->
         >
           Save
         </button>
       </form>
-
-      <a class="btn" href="#">Play Again</a>
       <a class="btn" href="index.html">Go Home</a>
-      
     </div>
 
+    <h2>Previous High Scores:</h2>
+      <div class="previous-high-scores"></div>
+        <div id="initials-column">
+          <h3>Initials:</h3>
+          <ul id="list-name">
+            <li>MCR</li>
+          </ul>
+        </div>
+        <div id="score-column">
+          <h3>Score:</h3>
+          <ul id="list-score">
+            <li>
+              50
+            </li>
+          </ul>
+        </div>
+      </div>
     
 
   </main>

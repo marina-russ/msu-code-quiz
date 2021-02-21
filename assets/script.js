@@ -1,10 +1,14 @@
 const question = document.getElementById('question-posed');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
-//console.log(choices);
+
 const questionCounterText = document.getElementById('question-counter');
 const scoreCounterText = document.getElementById('score-counter');
-const answerPoints = 1;
+
+const answerPoints = 10;
 const maxTestQuestions = 5;
+
+const startButton = document.getElementById('start-btn');
+const showTimer = document.getElementById('timer-div');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -66,6 +70,8 @@ let questions = [
 
 // arrow function: function name = (parameters) => return
 startGame = () => {
+  //! startTimer();
+
   questionCounter = 0;
   score = 0;
 
@@ -74,6 +80,32 @@ startGame = () => {
   //console.log(availableQuestions);
   getNewQuestion();
 };
+
+// TODO: change <div id="time-div"> class name CSS from 'hidden' to 'display'
+//! function startTimer() {
+//   var presentTime = document.getElementById('timer-counter').innerHTML;
+//   var timeArray = presentTime.split(/[:]+/);
+//   var m = timeArray[0];
+//   var s = checkSecond((timeArray[1] - 1));
+//   if (s == 59) { m = m - 1 }
+//   //if(m<0){alert('timer completed')}
+
+//   document.getElementById('timer').innerHTML =
+//     m + ":" + s;
+//   console.log(m)
+//   setTimeout(startTimer, 1000);
+
+//   showTimer.addEventListener('click', function (
+
+//     let timerText = document.getElementById('timer-counter');
+
+//   document.getElementById('timer-counter').innerHTML = 1 + ":" + 00;
+
+// ));
+
+//}
+
+
 
 // * UPDATING SCORE
 incrementScore = num => {
@@ -86,7 +118,10 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0) {
     //if (availableQuestions.length === 0 || timer = 0) {} 
     // save score to local storage
-    localStorage.setItem("mostRecentScore", score);
+    //localStorage.setItem("mostRecentScore", score);
+
+    localStorage.setItem("mostRecentScore", JSON.stringify(score));
+
     // move to winner.html page
     return window.location.assign("winner.html");
   }
@@ -113,8 +148,7 @@ getNewQuestion = () => {
   //console.log(availableQuestions);
 };
 
-// * EVALUATING ANSWER & NEW QUESTION
-// TODO: right now only .choice-text (choice) has eventListener. how do i add eventListener to parent .answer-container so that .choice-option also has an eventListener?
+// * EVALUATING ANSWER & GETTING NEW QUESTION
 choices.forEach(choice => {
   choice.addEventListener('click', event => {
     const selectedChoice = event.target;
@@ -142,3 +176,5 @@ choices.forEach(choice => {
 });
 
 startGame();
+
+//********************** */
