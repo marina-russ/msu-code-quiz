@@ -14,56 +14,57 @@ let currentQuestion = {};
 let questionCounter = 0;
 let scoreCounter = 0;
 let availableQuestions = [];
+// questions and answers are pulled from https://www.codeconquest.com/coding-quizzes/javascript-knowledge-quiz-beginner/
 let questions = [
   {
-    question: "question string bbbbb",
+    question: "What kind of statement is used to execute actions based on a trigger or condition?",
 
-    choice1: "answer 1",
-    choice2: "answer 2",
-    choice3: "answer 3",
-    choice4: "answer 4",
-
-    answer: 1
-  },
-  {
-    question: "question string aaaaa",
-
-    choice1: "answer 111",
-    choice2: "answer 222",
-    choice3: "answer 333",
-    choice4: "answer 444",
+    choice1: "Conditional Statement",
+    choice2: "Regular Expression",
+    choice3: "Fired Event",
+    choice4: "Boolean Variable",
 
     answer: 1
   },
   {
-    question: "question string ccccc",
+    question: "What are the identifiers called that cannot be used as variables or function names?",
 
-    choice1: "answer 11111",
-    choice2: "answer 22222",
-    choice3: "answer 33333",
-    choice4: "answer 44444",
+    choice1: "Constants",
+    choice2: "Favorites",
+    choice3: "Reserved Words",
+    choice4: "Concrete Terms",
 
-    answer: 1
+    answer: 3
   },
   {
-    question: "question string dddddddd",
+    question: "What is the element called that can continue to execute a block of code as long as the specified condition remains TRUE?",
 
-    choice1: "answer 11111",
-    choice2: "answer 22222",
-    choice3: "answer 33333",
-    choice4: "answer 44444",
+    choice1: "ForEach",
+    choice2: "Loop",
+    choice3: "Clone",
+    choice4: "Repeater",
 
-    answer: 1
+    answer: 2
   },
   {
-    question: "question string eeeeeee",
+    question: "In JavaScript, what is used in conjunction with HTML to “react” to certain elements?",
 
-    choice1: "answer 11111",
-    choice2: "answer 22222",
-    choice3: "answer 33333",
-    choice4: "answer 44444",
+    choice1: "Condition",
+    choice2: "Boolean",
+    choice3: "RegExp",
+    choice4: "Events",
 
-    answer: 1
+    answer: 4
+  },
+  {
+    question: "In JavaScript, what element is used to store multiple values in a single variable?",
+
+    choice1: "Strings",
+    choice2: "Variables",
+    choice3: "Arrays",
+    choice4: "Functions",
+
+    answer: 3
   }
 
 ]
