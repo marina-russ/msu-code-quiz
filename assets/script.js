@@ -131,7 +131,7 @@ incrementScore = num => {
 };
 
 decreaseTime = num => {
-  time -=10;
+  time -=30;
   scoreCounterText.innerText = score;
 };
 
