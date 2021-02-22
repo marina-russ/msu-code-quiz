@@ -15,3 +15,5 @@ A timed JavaScript coding quiz with multiple-choice questions
 ## :triangular_ruler: Deployed App
 
 [Deployed App](https://marina-russ.github.io/code-quiz/)
+
+![Screenshot](/assets/quiz-screenshot.png)
