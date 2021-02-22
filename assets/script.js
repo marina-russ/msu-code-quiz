@@ -144,7 +144,7 @@ getNewQuestion = () => {
     //localStorage.setItem("mostRecentScore", score);
     localStorage.setItem("mostRecentScore", JSON.stringify(score));
     // move to winner.html page
-    return window.location.assign("winner.html");
+    return window.location.assign("win/winner.html");
   } 
 
   // update HUD question counter each round
