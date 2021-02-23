@@ -148,7 +148,7 @@ h3#countdown {
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
-  /*display: none;*/
+  display: none;
 }
 
 .answer-container {
@@ -174,17 +174,19 @@ h3#countdown {
 }
 
 .choice-text:hover {
-  color: #fff;
-  background-color: var(--zelda-link-past-blue);
+  color: var(--zelda-link-past-blue);
+  border-color: var(--zelda-link-past-blue);
 
 }
 
 .incorrect {
+  color: #000;
   background-color: var(--zelda-red);
   border-color: rgb(170, 15, 15); 
 }
 
 .correct {
+  color: #000;
   background-color: var(--zelda-green);
   border-color: green;
 }
