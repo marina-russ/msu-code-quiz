@@ -141,8 +141,7 @@ getNewQuestion = () => {
   // TODO: add more questions while still only showing 5 to the user. would that be a for loop, i++ to 4?
   if (availableQuestions.length === 0) {
     // save score to local storage
-    //localStorage.setItem("mostRecentScore", score);
-    localStorage.setItem("mostRecentScore", JSON.stringify(score));
+    localStorage.setItem("mostRecentScore", score);
     // move to winner.html page
     return window.location.assign("win/winner.html");
   } 
