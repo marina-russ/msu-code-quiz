@@ -1,0 +1,123 @@
+:root {
+	--alt-rows__even: hsla(175, 44%, 60%, 0.492);
+	--alt-rows__odd: hsla(175, 44%, 60%, 0.313);
+}
+
+/* =================== */
+/* ====MAIN STYLES==== */
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ========================= */
+/* ====NAVIGATION STYLES==== */
+
+#empty-nav__go-home {
+	width: 83px; /* width of Go Home Button */
+}
+
+/* ============================= */
+/* ====CONTAINER: USER SCORE==== */
+
+#container__quiz-score {
+	background-color: var(--main-bkgd);
+	font-size: 1em;
+	margin: 0 auto 20px;
+	max-width: 600px;
+	min-width: 400px;
+}
+
+#container__quiz-score p {
+	color: #fff;
+}
+
+#result__user-score {
+	border: 5px double var(--text-correct);
+	background-color: var(--main-accent);
+	margin: 0 auto;
+	padding: 10px 5px;
+	width: 100px;
+}
+
+#result__save-form {
+	margin: 10px;
+	padding: 10px;
+}
+
+.form-instructions {
+	margin: 0 auto;
+}
+
+input {
+	outline: none;
+	height: 30px;
+}
+
+input#result__user-initials {
+	text-align: center;
+	margin-inline-end: 10px;
+	width: 70px;
+}
+
+input::placeholder {
+	color: grey;
+}
+
+input[type="text"] {
+	border-style: solid;
+	border-width: 3px;
+	border-image: linear-gradient(to left, gold, goldenrod) 1;
+}
+
+input[type="text"]:focus {
+	color: sienna;
+}
+
+/* ============================== */
+/* ====CONTAINER: SAVED SCORE==== */
+
+#container__saved-scores {
+	background-color: var(--main-bkgd);
+	color: #fff;
+	font-size: 1em;
+	margin: 0 auto;
+	max-width: 600px;
+	min-width: 400px;
+}
+
+#saved__score-list {
+	margin: 10px auto;
+	width: 300px;
+	border: 2px dotted var(--main-accent);
+}
+
+#score-list__header__block {
+	background: var(--main-accent);
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+#score-list__header__first-row,
+.score-list__entry__row {
+	display: flex;
+	flex-shrink: 1;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 2px solid transparent;
+	padding: 10px;
+}
+
+.score-list__entry__row:hover {
+	color: var(--text-correct);
+	border: 2px solid var(--text-correct);
+}
+
+.score-list__entry__row:nth-child(even) {
+	background: var(--alt-rows__even);
+}
+
+.score-list__entry__row:nth-child(odd) {
+	background: var(--alt-rows__odd);
+}

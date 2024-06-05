@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code Quiz</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap"
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multiple-choice quiz that tests your basic JavaScript knowledge.">
+  <title>JavaScript Code Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
+
 <body>
   <nav>
-    <h1>Code Quiz Challenge</h1>
+    <a href="score.html" class="nav-destination">Saved Scores</a>
+    <h1>JavaScript Code Quiz</h1>
+    <div id="empty-nav__saved-scores" role="none"></div>
   </nav>
 
   <main>
-    <div class="setup">
-      <div id="dangerous-alone">
-        <h2>Welcome!</h2>
-        <div class="instructions">
-          <p>You have 3 minutes to complete the quiz.</p>
-          <p>Wrong answers will deduct 30 seconds from your time.</p>
+    <div id="container__setup" class="container" style="display:inline-block;">
+      <h2>Welcome!</h2>
+      <div class="instructions">
+        <p>You have 5 minutes to answer all 5 questions on the quiz.</p>
+        <p>Wrong answers will deduct 30 seconds from your time!</p>
+      </div>
+      <button id="btn__start" style="display:inline-block;">Start Quiz!</button>
+    </div>
+
+    <div id="container__quiz" class="container" style="display:none;">
+
+      <div id="container__hud">
+        <!--QUESTION TRACKER-->
+        <div class="hud__item">
+          <h2 class="hud__label">Question</h2>
+          <h3 id="hud__question-number" class="hud__header">0/5</h3>
         </div>
-        <img src="./assets/flame.jpg" class="flame" alt="flame">
-        <button id="start-btn" class="button">Start Quiz!</button>
-        <a href="./win/winner.html" id="highscore-button" class="button">View High Score!</a>
-        <img src="./assets/flame.png" class="flame" alt="flame">
+        <!--TIMER-->
+        <div class="hud__item">
+          <h2 class="hud__label">Timer:</h2>
+          <h3 id="hud__timer-countdown" class="hud__header">0:00</h3>
+        </div>
+        <!--SCORE COUNTER-->
+        <div class="hud__item">
+          <h2 class="hud__label">Score</h2>
+          <h3 id="hud__score-counter" class="hud__header">0</h3>
+        </div>
       </div>
 
+      <div id="container__question">
+        <div id="question__display">
+          <h4 id="question__text">Question goes here</h4>
+        </div>
 
-    </div>
-
-    <div class="hud-container">
-
-          <!--QUESTION COUNTER-->
-          <div class="hud-item">
-            <p class="hud-label">
-              Question
-            </p>
-            <h2 class="hud-main-text" id="question-counter">
-              0/5
-            </h2>
+        <div id="container__answer-block">
+          <div class="answer__option">
+            <p class="answer__number">1</p>
+            <p class="answer__text" data-number="1">Choice 1</p>
           </div>
-
-          <!--TIMER-->
-          <div class="hud-item timer-div">
-            <p class="hud-label">
-              Timer:
-            </p>
-            <h3 id="countdown">0:00</h3>
+          <div class="answer__option">
+            <p class="answer__number">2</p>
+            <p class="answer__text" data-number="2">Choice 2</p>
           </div>
-          
-          <!--SCORE COUNTER-->
-          <div class="hud-item">
-            <p class="hud-label">
-              Score
-            </p>
-            <h2 class="hud-main-text" id="score-counter">
-              0
-            </h2>
+          <div class="answer__option">
+            <p class="answer__number">3</p>
+            <p class="answer__text" data-number="3">Choice 3</p>
           </div>
+          <div class="answer__option">
+            <p class="answer__number">4</p>
+            <p class="answer__text" data-number="4">Choice 4</p>
+          </div>
+        </div>
 
-    </div>
-
-    <div id="qa-container">
-      <h3 id="question-posed">Question goes here</h3>
-      <div class="answer-container">
-        <p class="choice-option">A</p>
-        <p class="choice-text" data-number="1">Choice 1</p>
-      </div>
-      <div class="answer-container">
-        <p class="choice-option">B</p>
-        <p class="choice-text" data-number="2">Choice 2</p>
-      </div>
-      <div class="answer-container">
-        <p class="choice-option">C</p>
-        <p class="choice-text" data-number="3">Choice 3</p>
-      </div>
-      <div class="answer-container">
-        <p class="choice-option">D</p>
-        <p class="choice-text" data-number="4">Choice 4</p>
       </div>
     </div>
-    <div> </div>
-
   </main>
 
-  <script src="assets/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

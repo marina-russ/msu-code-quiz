@@ -1,0 +1,267 @@
+:root {
+	--nav-bkgd: hsl(231, 12%, 41%);
+	--nav-accent: hsl(232, 31%, 53%);
+	--nav-accent-hover: hsl(232, 34%, 44%);
+	--nav-outline: hsl(232, 49%, 45%);
+	--main-bkgd: hsla(175, 32%, 28%, 0.88);
+	--main-solid: hsl(175, 32%, 28%);
+	--main-accent: hsl(175, 38%, 19%);
+	--text-correct: hsla(149, 86%, 67%, 0.877);
+	--text-wrong: hsla(2, 100%, 69%, 0.85);
+}
+
+/* =================== */
+/* ====MAIN STYLES==== */
+
+body {
+	box-sizing: border-box;
+	font-family: "Sometype Mono", monospace;
+	font-optical-sizing: auto;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	text-rendering: optimizeSpeed;
+	height: 100vh;
+	margin: 0;
+	background-color: hsl(162, 43%, 39%); /* If image does not load */
+	background-image: url("../img/forest.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main {
+	height: auto;
+	margin: 0 auto;
+	width: 70%;
+	max-width: 1000px;
+	min-width: 600px;
+}
+
+.container {
+	background-color: var(--main-bkgd);
+	padding: 20px;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+ul ::marker {
+	font-size: 0;
+}
+
+/* =================== */
+/* ====TEXT STYLES==== */
+
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+	margin: 0px;
+}
+
+h1,
+h2 {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	padding: 0px;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+p {
+	margin: 0;
+}
+
+/* ========================= */
+/* ====NAVIGATION STYLES==== */
+
+nav {
+	background-color: var(--nav-bkgd);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	justify-content: space-between;
+	height: 70px;
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 10px 15px;
+}
+
+.nav-destination {
+	background-color: var(--nav-accent);
+	border: 2px solid var(--nav-outline);
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.1em;
+	font-weight: 500;
+	text-decoration: none;
+	padding: 12px 12px 10px;
+	height: 30px;
+}
+
+.nav-destination:hover {
+	background-color: var(--nav-accent-hover);
+	border-color: #fff;
+}
+
+#empty-nav__saved-scores {
+	width: 142.5px; /* width of Saved Scores Button */
+}
+
+/* ===================== */
+/* ====BUTTON STYLES==== */
+
+button {
+	background-color: darkgoldenrod;
+	border: 2px solid transparent;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-image: linear-gradient(to right, orange, darkorange);
+	border: 2px solid gold;
+}
+
+/* ======================== */
+/* ====CONTAINER: SETUP==== */
+
+#container__setup,
+.instructions,
+#setup__start {
+	color: #fff;
+}
+
+#container__setup {
+	font-size: 1.2em;
+	padding: 20px 20px 35px;
+}
+
+.instructions,
+#setup__start {
+	padding: 15px;
+}
+
+/* ====================== */
+/* ====CONTAINER: HUD==== */
+
+#container__hud {
+	border-bottom: 1px solid var(--main-accent);
+	display: flex;
+	flex-shrink: 1;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.hud__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+.hud__label,
+.hud__header {
+	font-size: 2em;
+}
+
+h3#hud__timer-countdown {
+	color: var(--text-correct);
+}
+
+/* ======================= */
+/* ====CONTAINER: QUIZ==== */
+
+#container__question {
+	margin: 0 auto;
+	max-width: 700px;
+	min-width: 550px;
+}
+
+/* ! TODO: change answer_option from div to ul, then its below <p>'s into <li>'s -- then maybe having event listener on parent (now <ul>) will work? */
+
+#question__display {
+	border: 3px dotted var(--main-accent);
+	background-color: var(--main-solid);
+	margin: 10px 10px 15px;
+	padding: 10px;
+}
+
+#container__answer-block {
+	padding: 5px;
+	margin: 0px auto;
+	width: 450px;
+}
+
+.answer__option {
+	display: flex;
+	flex-shrink: 1;
+	flex-direction: row;
+	justify-content: center;
+	pointer-events: none;
+	/* pointer-event set to none allows :hover to apply to child elements only */
+	margin: 10px auto;
+	width: 100%;
+}
+
+.answer__number,
+.answer__text {
+	font-size: 1.2em;
+	padding: 10px 15px;
+}
+
+.answer__number {
+	background-color: var(--main-accent);
+	color: #fff;
+	font-weight: 500;
+	pointer-events: none;
+	margin-right: 10px;
+}
+
+.answer__text {
+	background-color: #fff;
+	cursor: pointer;
+	pointer-events: auto;
+	text-align: left;
+	width: 100%;
+}
+
+.answer__text:hover {
+	background-color: gold;
+}
+
+.incorrect {
+	color: #000;
+	background-color: var(--text-wrong) !important;
+	border-color: rgb(170, 15, 15);
+}
+
+.correct {
+	color: #000;
+	background-color: var(--text-correct) !important;
+	border-color: green;
+}

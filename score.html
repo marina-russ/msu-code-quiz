@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quiz score result and scoreboard that displays your saved scores.">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/score.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+  <nav>
+    <a class="nav-destination" href="../index.html">Go Home</a>
+    <h1>JavaScript Code Quiz</h1>
+    <div id="empty-nav__go-home" role="none"></div>
+  </nav>
+
+  <main>
+    <div id="container__quiz-score" class="container">
+      <h2>Your Score:</h2>
+      <h3 id="result__user-score"></h3>
+      <form id='result__save-form'>
+        <h3>Congrats! 🥳</h3>
+        <p class="form-instructions">Save your score below:</p>
+        <br>
+        <label for="result__user-initials">Initials:</label>
+        <input type="text" name="initials" id="result__user-initials" placeholder="ABC" required>
+        <button type="submit" id="btn__save-score">
+          Save
+        </button>
+      </form>
+    </div>
+
+    <div id="container__saved-scores" class="container">
+      <h2 id="phs-h2">⭐ Saved Scores ⭐</h2>
+      <div id="saved__score-list">
+        <div id="score-list__header__block">
+          <ul id="score-list__header__first-row">
+            <li class="score-list__header__initials">Initials:</li>
+            <li class="score-list__header__score">Score:</li>
+          </ul>
+        </div>
+        <div id="score-list__entry__block">
+          <!-- <ul.score-list__entry__row> entries added via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../js/score.js"></script>
+</body>
+
+</html>
